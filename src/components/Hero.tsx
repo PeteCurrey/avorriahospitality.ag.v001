@@ -1,7 +1,21 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "./FadeIn";
+import { AnimatePresence, motion } from "framer-motion";
 
 export function Hero() {
+  const words = ["property", "restaurant", "hotel", "pub"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Fine Dining Background Image */}
@@ -23,9 +37,25 @@ export function Hero() {
         
         <FadeIn delay={0.4}>
           <h1 className="text-5xl md:text-7xl font-display text-brand-bg leading-[1.1] mb-8">
-            Your property deserves<br />a presence to match.
+            Your{" "}
+            <span className="inline-grid text-brand-accent italic font-medium">
+              <AnimatePresence>
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4 }}
+                  className="col-start-1 row-start-1"
+                >
+                  {words[index]}
+                </motion.span>
+              </AnimatePresence>
+            </span>{" "}
+            deserves<br />a presence to match.
           </h1>
         </FadeIn>
+
 
         <FadeIn delay={0.6}>
           <div className="w-24 h-px bg-brand-bg/40 mx-auto mb-8" />
