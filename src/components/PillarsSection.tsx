@@ -27,8 +27,9 @@ export function PillarsSection() {
           <FadeIn>
             <span className="section-label">THE PLATFORM</span>
             <h2 className="text-4xl md:text-5xl font-display text-brand-stone">
-              Everything your property needs. Nothing it doesn't.
+              Everything your property needs. Nothing it doesn&apos;t.
             </h2>
+
           </FadeIn>
         </div>
 

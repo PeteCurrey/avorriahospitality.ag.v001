@@ -1,15 +1,14 @@
 import { FadeIn } from "./FadeIn";
-import Image from "next/image";
 
 interface FeatureProps {
   title: string;
   items: string[];
-  image: string;
   isReversed?: boolean;
   bgClass: string;
 }
 
-function Feature({ title, items, image, isReversed, bgClass }: FeatureProps) {
+function Feature({ title, items, isReversed, bgClass }: FeatureProps) {
+
   return (
     <div className={`${bgClass} py-24 md:py-32 px-6`}>
       <div className="max-w-7xl mx-auto">

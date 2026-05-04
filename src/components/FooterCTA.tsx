@@ -10,8 +10,9 @@ export function FooterCTA() {
             Ready to take back your bookings?
           </h2>
           <p className="text-lg text-brand-bg/70 mb-10 max-w-2xl mx-auto">
-            Book a free 30-minute discovery call. We'll show you exactly what your property could look like.
+            Book a free 30-minute discovery call. We&apos;ll show you exactly what your property could look like.
           </p>
+
           <Button className="bg-brand-accent hover:bg-brand-accent/90 text-white rounded-none px-10 py-7 h-auto text-lg transition-all duration-300">
             Book Your Call
           </Button>

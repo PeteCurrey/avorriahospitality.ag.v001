@@ -41,8 +41,9 @@ export function TrustSection() {
             <FadeIn key={index} delay={0.2}>
               <div className="max-w-lg">
                 <p className="text-2xl font-display text-brand-stone leading-relaxed mb-8 italic">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </p>
+
                 <p className="text-sm font-sans font-medium tracking-wider text-brand-accent uppercase">
                   {testimonial.author}
                 </p>
