@@ -26,21 +26,17 @@ function Feature({ title, items, isReversed, bgClass }: FeatureProps) {
               </ul>
             </FadeIn>
           </div>
-          <div className={`relative aspect-[4/3] w-full bg-[#FAF7F2] rounded-lg overflow-hidden border border-brand-stone/5 shadow-sm p-8 ${isReversed ? 'md:order-1' : ''}`}>
+          <div className={`relative aspect-[4/3] w-full bg-[#FAF7F2] rounded-lg overflow-hidden border border-brand-stone/5 shadow-sm ${isReversed ? 'md:order-1' : ''}`}>
              <FadeIn delay={0.4} direction="none">
-               <div className="w-full h-full flex flex-col gap-4 opacity-20">
-                 <div className="w-full h-8 bg-brand-stone/20 rounded" />
-                 <div className="grid grid-cols-3 gap-4 h-full">
-                    <div className="col-span-2 bg-brand-stone/10 rounded" />
-                    <div className="bg-brand-stone/10 rounded" />
-                 </div>
-                 <div className="w-2/3 h-4 bg-brand-stone/20 rounded" />
-               </div>
-               <div className="absolute inset-0 flex items-center justify-center text-brand-stone/40 font-display text-xl italic">
-                 {title}
-               </div>
+               <img 
+                 src={image} 
+                 alt={`${title} Interface Preview`} 
+                 className="w-full h-full object-cover absolute inset-0"
+               />
+               <div className="absolute inset-0 bg-brand-stone/10 mix-blend-multiply" />
              </FadeIn>
           </div>
+
         </div>
       </div>
     </div>
@@ -58,7 +54,7 @@ export function DeepDive() {
         "Secure deposit handling",
         "Automated confirmation emails"
       ],
-      image: "/booking-engine.webp",
+      image: "https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?q=80&w=2000&auto=format&fit=crop",
       bgClass: "bg-brand-parchment"
     },
     {
@@ -70,7 +66,7 @@ export function DeepDive() {
         "Post-stay reviews",
         "Digital guest directory"
       ],
-      image: "/guest-portal.webp",
+      image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=2000&auto=format&fit=crop",
       isReversed: true,
       bgClass: "bg-brand-white"
     },
@@ -83,7 +79,7 @@ export function DeepDive() {
         "Occupancy rate tracking",
         "Guest record management"
       ],
-      image: "/property-dashboard.webp",
+      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2000&auto=format&fit=crop",
       bgClass: "bg-brand-parchment"
     },
     {
@@ -95,7 +91,7 @@ export function DeepDive() {
         "Event space management",
         "Dietary requirement tracking"
       ],
-      image: "/restaurant-dining.webp",
+      image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=2000&auto=format&fit=crop",
       isReversed: true,
       bgClass: "bg-brand-white"
     }

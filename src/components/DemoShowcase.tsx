@@ -27,29 +27,16 @@ export function DemoShowcase() {
         </FadeIn>
 
         <FadeIn delay={0.4}>
-          <div className="relative aspect-video w-full bg-[#FAF7F2] rounded-xl overflow-hidden border border-brand-stone/10 shadow-2xl p-12">
-            <div className="w-full h-full flex flex-col gap-6 opacity-20">
-              <div className="flex justify-between items-center mb-10">
-                <div className="w-40 h-6 bg-brand-stone/40 rounded" />
-                <div className="flex gap-4">
-                  <div className="w-12 h-2 bg-brand-stone/20 rounded" />
-                  <div className="w-12 h-2 bg-brand-stone/20 rounded" />
-                  <div className="w-12 h-2 bg-brand-stone/20 rounded" />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-12 flex-grow">
-                <div className="flex flex-col gap-4">
-                  <div className="w-full h-8 bg-brand-stone/40 rounded" />
-                  <div className="w-2/3 h-4 bg-brand-stone/20 rounded" />
-                </div>
-                <div className="bg-brand-stone/10 rounded-lg h-full" />
-              </div>
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center text-brand-stone/40 font-display text-3xl italic">
-              Grasmere Hall
-            </div>
+          <div className="relative aspect-video w-full bg-[#FAF7F2] rounded-xl overflow-hidden border border-brand-stone/10 shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1542314831-c6a4d14d8373?q=80&w=2000&auto=format&fit=crop" 
+              alt="Grasmere Hall Showcase" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-brand-stone/10 mix-blend-multiply" />
           </div>
         </FadeIn>
+
 
       </div>
     </section>
